@@ -1,4 +1,4 @@
-#!/usr/bin/env python
+#!/usr/bin/env python3
 
 import json
 import re
@@ -17,7 +17,7 @@ def is_valid_phone(phone):
     return False
 
 def is_valid_email(email):
-    pattern = re.compile('[a-z0-9._-]+@[a-z0-9.]+\.[a-z0-9]+')
+    pattern = re.compile('[a-z0-9._-]+@[a-z0-9.]+.[a-z0-9]+')
     if pattern.fullmatch(email.lower()):
         return True
     return False
@@ -42,4 +42,5 @@ valid_people_data = list(filter(lambda x: is_valid_phone(x['phone']), valid_peop
 valid_people_data = list(filter(lambda x: x['age'] >= 30, valid_people_data))
 
 print(json.dumps(valid_people_data, indent=4, sort_keys=True))
+\
 
