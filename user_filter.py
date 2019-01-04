@@ -50,6 +50,9 @@ def main():
 
     valid_people_data = run_filter(people_data)
 
+#    with open('persons.json', 'w') as file:
+#        json.dumps(valid_people_data, file, indent=4, sort_keys=True)
+#
     print(json.dumps(valid_people_data, indent=4, sort_keys=True))
 
 
