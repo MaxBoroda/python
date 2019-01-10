@@ -1,0 +1,11 @@
+a = 6
+b = 10
+
+x = range(a, b)
+for n in x:
+    print(n)
+if a >= b:
+    print("Error 'a' must be < 'b'")
+res = sum(x for x in range(a, b))
+print("Sum range a & b")
+print(res)
